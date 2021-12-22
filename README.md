@@ -1,6 +1,11 @@
 Demo of Lighthouse user flow with puppeteer
 
+```
+$yarn install
+```
+
 
 How to run test ?
-
-$npm test
+```
+$yarn test
+```
