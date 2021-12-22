@@ -1,3 +1,6 @@
-# demo-lighthouse-user-flow
+Demo of Lighthouse user flow with puppeteer
 
-Demo for how to work with lighthouse and puppeteer
+
+How to run test ?
+
+$npm test
