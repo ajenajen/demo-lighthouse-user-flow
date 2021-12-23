@@ -28,5 +28,10 @@
     "lodash": "^4.17.4",
     "open": "^8.4.0",
     "puppeteer": "^13.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ajenajen/demo-lighthouse-user-flow/issues"
+  },
+  "homepage": "https://github.com/ajenajen/demo-lighthouse-user-flow#readme",
+  "devDependencies": {}
 }
