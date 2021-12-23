@@ -29,9 +29,6 @@ let scrape = async () => {
 			fullPage: true
 		});
 
-		// await page.pdf({ path: 'google.pdf', format: 'a4' });
-		// https://github.com/puppeteer/puppeteer/blob/v13.0.0/docs/api.md#pagepdfoptions
-
 	}
 
 	await browser.close();

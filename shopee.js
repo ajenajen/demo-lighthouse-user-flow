@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-let scrape = async () => {
+async function shopeeTest() {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
@@ -23,21 +23,18 @@ let scrape = async () => {
   await page.waitForSelector('.shopee-search-item-result__item:first-child');
   await page.screenshot({ path: 'screenshot/shopee-list.png' });
   
+  await Promise.all([
+      page.waitForTimeout(2000),
+      page.click('.shopee-search-item-result__item:first-child > a'),
+  ]);
+    
   // Generating a pdf is currently only supported in Chrome headless.
-  // await Promise.all([
-  //   page.waitForTimeout(2000),
-  //   page.click('.shopee-search-item-result__item:first-child > a'),
-  // ]);
-
-  
-  await page.emulateMediaType('screen');
-  await page.pdf({ path: 'screenshot/shopee-cart.pdf', format: 'A4', printBackground: true });
-  await page.waitForTimeout(2000);
+  // await page.emulateMediaType('screen');
+  // await page.pdf({ path: 'screenshot/shopee-cart.pdf', format: 'A4', printBackground: true });
+  // await page.waitForTimeout(2000);
 
   await browser.close();
 
 };
 
-scrape().then((value) => {
-  console.log('Success', value); // Success!
-});
+shopeeTest();
