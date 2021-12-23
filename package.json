@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "puppeteer": "node puppeteer.js",
+    "amazon": "node amazon.js",
     "test": "node lighthouse-user-flow.js"
   },
   "repository": {
